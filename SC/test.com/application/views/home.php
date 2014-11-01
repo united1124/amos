@@ -117,7 +117,7 @@ body{
 <form name="form1" method="post" action="<?php echo base_url();?>index.php/checkLogin">
   <input type="text" class="inputlogin" name="username" id="username" placeholder="Username" required><br>
   <input type="password"  class="inputlogin" name="password" id="password" placeholder="Password" required><br>
-  <input name="" type="submit" value="Login" class="submit"> <?php echo $error;?>
+  <input name="" type="submit" value="Login" class="submit"><br> <?php echo $error;?>
 </form></div>
 
 </body>
