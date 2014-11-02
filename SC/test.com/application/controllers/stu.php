@@ -24,7 +24,11 @@ class Stu extends CI_Controller {
 			 
 		 }
 	}
-
+function show()
+	{
+		$data['people']= $this->People->getallDataStu();
+		$this->load->view('showtea',$data);
+	}
 	
 }
 

@@ -94,25 +94,15 @@ body{
 </div>
 <div id="menu">
 <ul>
-   <li><a href='#'>Home</a></li>
-   <li class='active has-sub'><a href='#'>Products</a>
-      <ul>
-         <li class='has-sub'><a href='#' style="c">Product 1</a>
-            <ul>
-               <li><a href='#'>Sub Product</a></li>
-               <li><a href='#'>Sub Product</a></li>
-            </ul>
-         </li>
-         <li class='has-sub'><a href='#'>Product 2</a>
-            <ul>
-               <li><a href='#'>Sub Product</a></li>
-               <li><a href='#'>Sub Product</a></li>
-            </ul>
-         </li>
-      </ul>
+   <li><a href='#'>หน้าแรก</a></li>
+   <li><a href='#'>แก้ไขข้อมูลส่วนตัว</a>
+    <ul>
+    </ul>
    </li>
-   <li><a href='#'>About</a></li>
-   <li><a href='#'>Contact</a></li>
+   <li><a href='<?php echo base_url()?>index.php/tea/show'>ดูข้อมูลนักศึกษา</a></li>
+   <li><a href='#'>ทำรายการนัดหมาย</a></li>
+   <li><a href='#'>จัดการเวลานัดหมาย</a></li>
+    <li><a href='#'>รายงาน</a></li>
 </ul>
 </div>
 </header>

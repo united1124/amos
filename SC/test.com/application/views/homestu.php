@@ -93,25 +93,13 @@ body{
 <a href='<?php echo base_url()?>index.php/home/logout'>Logout</a></div>
 <div id="menu">
 <ul>
-   <li><a href='#'>Home</a></li>
-   <li class='active has-sub'><a href='#'>Products</a>
-      <ul>
-         <li class='has-sub'><a href='#' style="c">Product 1</a>
-            <ul>
-               <li><a href='#'>Sub Product</a></li>
-               <li><a href='#'>Sub Product</a></li>
-            </ul>
-         </li>
-         <li class='has-sub'><a href='#'>Product 2</a>
-            <ul>
-               <li><a href='#'>Sub Product</a></li>
-               <li><a href='#'>Sub Product</a></li>
-            </ul>
-         </li>
-      </ul>
+   <li><a href='#'>หน้าแรก</a></li>
+   <li><a href='#'>แก้ไขข้อมูลส่วนตัว</a>
+    <ul>
+    </ul>
    </li>
-   <li><a href='#'>About</a></li>
-   <li><a href='#'>Contact</a></li>
+   <li><a href='<?php echo base_url()?>index.php/stu/show'>ดูข้อมูลอาจาร์ที่ปรึกษา</a></li>
+   <li><a href='#'>ทำรายการนัดหมาย</a></li>
 </ul>
 </div>
 </header>

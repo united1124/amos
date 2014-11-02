@@ -189,6 +189,21 @@ function login()
 	return $insert;
  }
  
+ function getAllTeacher(){
+	 $this->db->where('status','tea');
+	 return $this->db->get('people')->result_array();
+ }
+
+ function getallData()
+	{
+		$this->db->where('status','stu');
+		return $this->db->get('people')->result_array();
+	}
+ function getallDataStu()
+	{
+		$this->db->where('status','tea');
+		return $this->db->get('people')->result_array();
+	}
 
 
 }

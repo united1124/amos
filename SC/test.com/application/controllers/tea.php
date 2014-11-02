@@ -24,7 +24,15 @@ class Tea extends CI_Controller {
 			 
 		 }
 	}
-	
+	function homePageTea()
+	{	
+		$this->load->view('homePageTea');
+	}
+	function show()
+	{
+		$data['people']= $this->People->getallData();
+		$this->load->view('showstu',$data);
+	}
 }
 
 ?>

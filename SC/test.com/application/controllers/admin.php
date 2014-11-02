@@ -74,13 +74,24 @@ class Admin extends CI_Controller {
 							$this->People->setAddress($namedDataArray[$i]['Address']);
 							$this->People->setTel($namedDataArray[$i]['Tel']);
 							$this->People->setStatus($namedDataArray[$i]['Status']);
-							
 							$this->People->addPeople();
+							
+							$this->index();
 							}
+							
 				}
+				
+			
+	}
+	
+	function math(){
+		$data['tea'] = $this->People->getAllTeacher();
 
-
-
+		$this->load->view('math',$data);
+	}
+	
+	function addChill($id){
+		echo  $id; //// 50%
 	}
 
 	
