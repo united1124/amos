@@ -29,7 +29,21 @@ function show()
 		$data['people']= $this->People->getallDataStu();
 		$this->load->view('showtea',$data);
 	}
+	function update(){
+		 $data = $this->session->userdata('loginData');
+		$data['update']= $this->People->getDataStu($data['id']);
+		$this->load->view('updateStu',$data);
+		}
+		
+	function doUpdate()
+		{
+		$this->People->setId($this->input->post('id'));
+		$this->People->setAddress($this->input->post('address'));
+		$this->People->setTel($this->input->post('tel'));
+				
+		$this->People->upDateTeas();
+		$this->index();
 	
+	}
 }
-
 ?>

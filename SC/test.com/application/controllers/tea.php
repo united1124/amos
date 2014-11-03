@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Tea extends CI_Controller {
 	
 	 function __construct()
@@ -33,6 +33,19 @@ class Tea extends CI_Controller {
 		$data['people']= $this->People->getallData();
 		$this->load->view('showstu',$data);
 	}
+	
+	function upDate(){
+		$data = $this->session->userdata('loginData');
+		$data['update']= $this->People->updateTea($data['id']);
+		$this->load->view('updateTea',$data);
+		}
+	function doUpdate()
+	{
+		$this->People->setId($this->input->post('id'));
+		$this->People->setAddress($this->input->post('address'));
+		$this->People->setTel($this->input->post('tel'));						
+		$this->People->upDateTeas();
+		$this->index();
+	}
 }
-
 ?>

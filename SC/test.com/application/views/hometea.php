@@ -5,6 +5,15 @@
 <title>test</title>
    <script src="<?php echo base_url()?>js/jquery-1.11.1.min.js" type="text/javascript"></script>
    <script src="<?php echo base_url()?>script.js"></script>
+      <script>
+   $(document).ready(function(){
+	 $(".submenu").click(function(event) {
+		 event.preventDefault();
+ 		var href = $(this).attr('href');
+         $('.content').load( href );
+	 });
+ });
+   </script>
    <link rel="stylesheet" href="<?php echo base_url()?>css/styles.css">
       <style>
 	  *{
@@ -95,11 +104,11 @@ body{
 <div id="menu">
 <ul>
    <li><a href='#'>หน้าแรก</a></li>
-   <li><a href='#'>แก้ไขข้อมูลส่วนตัว</a>
+   <li><a class="submenu"  href='<?php echo base_url()?>index.php/tea/upDate'>แก้ไขข้อมูลส่วนตัว</a>
     <ul>
     </ul>
    </li>
-   <li><a href='<?php echo base_url()?>index.php/tea/show'>ดูข้อมูลนักศึกษา</a></li>
+   <li><a class="submenu"  href='<?php echo base_url()?>index.php/tea/show'>ดูข้อมูลนักศึกษา</a></li>
    <li><a href='#'>ทำรายการนัดหมาย</a></li>
    <li><a href='#'>จัดการเวลานัดหมาย</a></li>
     <li><a href='#'>รายงาน</a></li>

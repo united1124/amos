@@ -189,11 +189,6 @@ function login()
 	return $insert;
  }
  
- function getAllTeacher(){
-	 $this->db->where('status','tea');
-	 return $this->db->get('people')->result_array();
- }
-
  function getallData()
 	{
 		$this->db->where('status','stu');
@@ -204,7 +199,29 @@ function login()
 		$this->db->where('status','tea');
 		return $this->db->get('people')->result_array();
 	}
+	
+ function updateTea($id)
+	{
 
-
+		$this->db->where('people.id',$id);
+		$query = $this->db->get('people')->result_array();
+		return $query;
+	}
+function getDataStu($id){
+	
+		$this->db->where('people.id',$id);
+		$query = $this->db->get('people')->result_array();
+		return $query;
+}
+function upDateTeas()
+	{
+		$data = array(
+					   'address' 	=> $this->getAddress(),
+					   'tel' 		=> $this->getTel()   
+					);
+			$this->db->where('people.id',$this->getId());
+			$this->db->update('people',$data);
+	}
+ 
 }
 ?>

@@ -21,6 +21,7 @@ class CheckLogin extends CI_Controller {
 		foreach($data as $r)  // สั่งวน เพื่อเก็บค่าที่อบู่ใน $data
 		$sesData = array();
 				$sesData = array(
+				'id' =>$r->id,
 				  'username' => $r->username,
 				  'name' => $r->name,
 				  'lastname' => $r->lastname,
