@@ -16,7 +16,7 @@ header{
 	background-color:#9B6442;
 	height:130px;
 	min-width:1100px;
-	box-shadow:0px 0px 5px 2px #9B6442;
+	box-shadow:0px 0px 5px 2px #333333;
 }
 header #title{
 	width:80%;
@@ -40,7 +40,7 @@ header #logo{
 	background-color:#9B6442;
 	float:right;
 	border-bottom-left-radius:100px;
-	box-shadow:0px 0px 5px 2px #9B6442;
+	box-shadow:0px 0px 5px 2px #333333;
 }
 
 header #menu{
@@ -51,7 +51,7 @@ header #menu{
 	height:50px;
 	background-color:#E1AA33;
 	float:left;
-	box-shadow:0px 0px 1px 1px #E1E1E1;
+	box-shadow:0px 0px 5px 2px #333333;
 }
 #login{
 	margin-left:2px;
@@ -59,9 +59,18 @@ header #menu{
 	height:*;
 	width:36%;
 	min-width:300px;
-	background-color:#E1AA33;
-	border-radius:10px;
-	box-shadow:0px 0px 1px 1px #E1E1E1;
+	
+background: rgb(255,255,178); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,178,1) 0%, rgba(255,255,127,1) 39%, rgba(255,255,76,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,178,1)), color-stop(39%,rgba(255,255,127,1)), color-stop(100%,rgba(255,255,76,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,178,1) 0%,rgba(255,255,127,1) 39%,rgba(255,255,76,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,178,1) 0%,rgba(255,255,127,1) 39%,rgba(255,255,76,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,178,1) 0%,rgba(255,255,127,1) 39%,rgba(255,255,76,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(255,255,178,1) 0%,rgba(255,255,127,1) 39%,rgba(255,255,76,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb2', endColorstr='#ffff4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	
+	box-shadow:0px 0px 5px 2px #333333;
 	padding-bottom:20px;
 	position:fixed;
 	margin-left:32%;
@@ -70,7 +79,16 @@ header #menu{
 }
 body{
 	margin:0;
-	background-color:#FED2DF;
+	
+	background: rgb(255,102,255); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(255,102,255,1) 1%, rgba(255,204,255,1) 50%, rgba(255,102,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(1%,rgba(255,102,255,1)), color-stop(50%,rgba(255,204,255,1)), color-stop(100%,rgba(255,102,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(255,102,255,1) 1%,rgba(255,204,255,1) 50%,rgba(255,102,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(255,102,255,1) 1%,rgba(255,204,255,1) 50%,rgba(255,102,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(255,102,255,1) 1%,rgba(255,204,255,1) 50%,rgba(255,102,255,1) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(255,102,255,1) 1%,rgba(255,204,255,1) 50%,rgba(255,102,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff66ff', endColorstr='#ff66ff',GradientType=1 ); /* IE6-9 */
+
 	text-align:center;
 }
 .content{
@@ -81,7 +99,7 @@ body{
 	min-width:880px;
 	height:800px;
 	background-color:#FFFFFF;
-	box-shadow:0px 0px 10px 0px; #565656
+	box-shadow:0px 0px 5px 2px #333333;
 }
 
 .active a{color:#FFF}
@@ -103,7 +121,7 @@ body{
    </style>
 </head>
 <header>
-<div id="title"><p>WLECOME</p></div>
+<div id="title" style="color:#FFF; text-shadow:1px 1px 1px #000;"><p>WLECOME</p></div>
 <div id="logo">
 <img src="<?php echo base_url()?>img/ncuIcon.gif" height="200px" width="200px" style="float:right;margin-top:5px;margin-right:15px;"/>
 </div>
@@ -113,7 +131,7 @@ body{
 <body>
 
 <div id="login">
-<h2 style="color:#FFF;text-shadow:1px 1px 1px #333333;">Login</h2>
+<h2 style="color:#000;text-shadow:1px 1px 1px #FFF;">Login</h2>
 <form name="form1" method="post" action="<?php echo base_url();?>index.php/checkLogin">
   <input type="text" class="inputlogin" name="username" id="username" placeholder="Username" required><br>
   <input type="password"  class="inputlogin" name="password" id="password" placeholder="Password" required><br>
