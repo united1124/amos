@@ -2,121 +2,180 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>test</title>
-   <script src="<?php echo base_url()?>js/jquery-1.11.1.min.js" type="text/javascript"></script>
-   <script src="<?php echo base_url()?>script.js"></script>
-      <script>
-   $(document).ready(function(){
-	 $(".submenu").click(function(event) {
-		 event.preventDefault();
- 		var href = $(this).attr('href');
-         $('.content').load( href );
-	 });
- });
-   </script>
-   <link rel="stylesheet" href="<?php echo base_url()?>css/styles.css">
-      <style>
-	  *{
-		  font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	  }
-header{
-	margin-top:0px;
-	width:100%;
-	background-color:#9B6442;
-	height:130px;
-	min-width:1100px;
-	box-shadow:0px 0px 5px 2px #9B6442;
-}
-header #title{
-	width:80%;
-	min-width:800px;
-	height:70px;
-	background-color:#9B6442;
-	color:#FFF;
-	font-size:50px;
-	float:left;
-}
-header #title p{
-	margin-top:0px;
-	margin-left:30px;
-	text-shadow:0px 2px 2px #646464;
-	float:left;
-}
-header #logo{
-	width:220px;
-	min-width:220px;
-	height:205px;
-	background-color:#9B6442;
-	float:right;
-	border-bottom-left-radius:100px;
-	box-shadow:0px 0px 5px 2px #9B6442;
+<title>Wlecome Teacher</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url()?>js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url()?>js/script.js"></script>
+    <script src="<?php echo base_url()?>js/jquery.bxslider.js"></script>
+    <script src="<?php echo base_url()?>js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>js/slideBox.js"></script>
+    <link href="<?php echo base_url()?>css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo base_url()?>css/slideBoxy.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>css/styles.css">
+<style>
+.myButton {
+	-moz-box-shadow: 3px 4px 0px 0px #347327;
+	-webkit-box-shadow: 3px 4px 0px 0px #347327;
+	box-shadow: 3px 4px 0px 0px #347327;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #59b364), color-stop(1, #459940));
+	background:-moz-linear-gradient(top, #59b364 5%, #459940 100%);
+	background:-webkit-linear-gradient(top, #59b364 5%, #459940 100%);
+	background:-o-linear-gradient(top, #59b364 5%, #459940 100%);
+	background:-ms-linear-gradient(top, #59b364 5%, #459940 100%);
+	background:linear-gradient(to bottom, #59b364 5%, #459940 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#59b364', 
+	endColorstr='#459940',GradientType=0);
+	background-color:#59b364;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #298f5e;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:3px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #488a3e;
 }
 
-header #menu{
-	margin-left:5px;
-	border-radius:10px;
-	width:60%;
-	min-width:600px;
-	height:50px;
-	background-color:#E1AA33;
-	float:left;
-	box-shadow:0px 0px 1px 1px #E1E1E1;
-}
-header #login{
-	margin-left:2px;
-	margin-right:2px;
-	height:50px;
-	width:18%;
-	min-width:200px;
-	background-color:#E1AA33;
-	border-radius:10px;
-	box-shadow:0px 0px 1px 1px #E1E1E1;
-	float:left;
-}
-body{
-	margin:0;
-	background-color:#FED2DF;
-	text-align:center;
-}
-.content{
-	margin-top:6px;
-	width:80%;
-	margin-left:10%;
-	margin-right:10%;
-	min-width:880px;
-	height:800px;
-	background-color:#FFFFFF;
-	box-shadow:0px 0px 10px 0px; #565656
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #459940), color-stop(1, #59b364));
+	background:-moz-linear-gradient(top, #459940 5%, #59b364 100%);
+	background:-webkit-linear-gradient(top, #459940 5%, #59b364 100%);
+	background:-o-linear-gradient(top, #459940 5%, #59b364 100%);
+	background:-ms-linear-gradient(top, #459940 5%, #59b364 100%);
+	background:linear-gradient(to bottom, #459940 5%, #59b364 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#459940', 
+	endColorstr='#59b364',GradientType=0);
+	background-color:#459940;
 }
 
-.active a{color:#FFF}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
 
-   </style>
-</head>
-<header>
-<div id="title"><p>WLECOME</p></div>
-<div id="logo">
-<img src="<?php echo base_url()?>img/ncuIcon.gif" height="200px" width="200px" style="float:right;margin-top:5px;margin-right:15px;"/>
-</div>
-<div id="login">สวัสดีคุณ : <?php echo $login['name'].'  '.$login['lastname'];?><br>
-<a href='<?php echo base_url()?>index.php/home/logout'>Logout</a>
-</div>
-<div id="menu">
-<ul>
-   <li><a href='#'>หน้าแรก</a></li>
-   <li><a class="submenu"  href='<?php echo base_url()?>index.php/tea/upDate'>แก้ไขข้อมูลส่วนตัว</a>
-    <ul>
-    </ul>
-   </li>
-   <li><a class="submenu"  href='<?php echo base_url()?>index.php/tea/show'>ดูข้อมูลนักศึกษา</a></li>
-   <li><a href='#'>ทำรายการนัดหมาย</a></li>
-   <li><a href='#'>จัดการเวลานัดหมาย</a></li>
-    <li><a href='#'>รายงาน</a></li>
-</ul>
-</div>
+input[type=text]{
+	width:200px;
+	height:20px;
+	background-color:#336600;
+	border-radius:5px;
+	border:0;
+	box-shadow:2px 2px 2px #333333;
+	-webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+	margin-right:5px;
+}
+
+input[type=text]:hover,input[type=text]:focus{
+	background-color:#C0E380;
+}
+
+.body-side{
+	margin-left:-200px;
+	margin-right:5%;
+}
+</style>
+
+<script>
+$(document).ready(function(){				
+	imgName = Array(   
+	'<?php echo base_url();?>img/ncuview1.jpg',
+	'<?php echo base_url();?>img/ncuview2.jpg',
+	'<?php echo base_url();?>img/ncuview3.jpg',          
+	'<?php echo base_url();?>img/ncuview4.jpg'
+	);            
+	slideBoxy(imgName,50,399,600,1,'3'); 
+	// การเรียกใช้ slideBoxy(  picName  ,  ขนาดลูกศร  ,  ความสูงของรูปทั้งหมด  ,  ความกว้างของรูปทั้งหมด  ,  ขนาดของเฟรม ใส่เป็น เท่า  , วินาทีที่จะเปลี่ยนรูปอัตโนมัติ);
+		 });
+</script>
+
 </header>
+<style type="text/css">
+.herderTop{
+		height:50px;
+		width:100%;
+		background-color:#FFF;
+		min-width:1100px;
+	}
+	
+body{
+		background-image: url(<?php echo base_url();?>img/background.jpg);
+		background-attachment: fixed;
+		margin-left: 0px;
+		margin-top: -13px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+	}
+	
+#bodyInfo{
+		width:80%;
+		height:*;
+		padding-bottom:30px;
+		margin-bottom:30px;
+		margin-top:170px;
+		margin-left:10%;
+		margin-right:10%;
+		min-width:1000px;
+		background-color:#FFF;
+		opacity:0.5;
+		border-radius:7px;
+	}
+	
+#herderBody{
+		height:120px;
+		float:left;
+		padding-bottom:10px;
+		margin-left:10%;
+		margin-right:10%;
+		padding-top:10px;
+	}
+#menu{
+		height:100;
+		width:*;
+	}
+#menu ul li{
+		float:left;
+		list-style:none;
+		padding:10px;
+		background-color:#CCC;
+		margin-left:5px;
+	}
+#cssmenu{
+		margin-top:-70px;
+		margin-left:157px;
+	}
+#logout{
+		margin-top:15px;
+		margin-left:5px;
+	}
+</style>
+
 <body>
-<div class="content">
-</div>
+    <div class="herderTop">
+	<div id="innerTop">
+       <a href="<?php echo base_url();?>index.php/home/logout"> <input id="logout" name="" type="Button" value="Logout" class="myButton"> </a>
+    </div>
+	</div>
+    <div id="herderBody">	
+        <img src="<?php echo base_url();?>img/ncuIcon2.png">
+    <div id='cssmenu'>
+		<ul>
+			<li><a href='#'>ข้อมูลส่วนตัว</a></li>
+			<li><a href='#'>ข้อมูลนักศึกษา</a></li>
+			<li><a href='#'>เวลานัดหมาย</a></li>
+            <li><a href='#'>การนัดหมายของนักศึกษา</a></li>
+            <li><a href='#'>ใส่รายละเอียดข้อมูลการให้ปรึกษา</a></li>
+            <li><a href='#'>รายงาน</a></li>
+		</ul>
+	</div>	
+    </div>
+    
+    <div id="bodyInfo">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
 </body>
 </html>

@@ -1,9 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans); 
-header #menu,
-header #menu ul,
-header #menu ul li,
-header #menu ul li a,
-header #menu header #menu-button {
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -15,8 +15,8 @@ header #menu header #menu-button {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-header #menu:after,
-header #menu > ul:after {
+#cssmenu:after,
+#cssmenu > ul:after {
   content: ".";
   display: block;
   clear: both;
@@ -24,69 +24,69 @@ header #menu > ul:after {
   line-height: 0;
   height: 0;
 }
-header #menu header #menu-button {
+#cssmenu #menu-button {
   display: none;
 }
-header #menu {
+#cssmenu {
   width: auto;
   font-family: 'Open Sans', sans-serif;
   line-height: 1;
-  background: #ffffff;
+  background: #FFF;
+  opacity:0.9;
+  border-radius:7px;
 }
-header #menu-line {
+#menu-line {
   position: absolute;
   top: 0;
   left: 0;
   height: 3px;
-  background: #B98E57;
+  background: #FF80C0;
   -webkit-transition: all 0.25s ease-out;
   -moz-transition: all 0.25s ease-out;
   -ms-transition: all 0.25s ease-out;
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-header #menu > ul > li {
+#cssmenu > ul > li {
   float: left;
 }
-header #menu.align-center > ul {
+#cssmenu.align-center > ul {
   font-size: 0;
   text-align: center;
 }
-header #menu.align-center > ul > li {
+#cssmenu.align-center > ul > li {
   display: inline-block;
   float: none;
 }
-header #menu.align-center ul ul {
+#cssmenu.align-center ul ul {
   text-align: left;
 }
-header #menu.align-right > ul > li {
+#cssmenu.align-right > ul > li {
   float: right;
 }
-header #menu.align-right ul ul {
+#cssmenu.align-right ul ul {
   text-align: right;
 }
-header #menu > ul > li > a {
+#cssmenu > ul > li > a {
   padding: 20px;
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #000000;
   -webkit-transition: color .2s ease;
   -moz-transition: color .2s ease;
   -ms-transition: color .2s ease;
   -o-transition: color .2s ease;
   transition: color .2s ease;
 }
-header #menu > ul > li:hover > a,
-header #menu > ul > li.active > a {
-	color:#5B2700;
-	text-shadow:1px 1px 1px #FFFFFF
-  font-weight:800;
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li.active > a {
+  color: #FF80C0;
 }
-header #menu > ul > li.has-sub > a {
+#cssmenu > ul > li.has-sub > a {
   padding-right: 25px;
 }
-header #menu > ul > li.has-sub > a::after {
+#cssmenu > ul > li.has-sub > a::after {
   position: absolute;
   top: 21px;
   right: 10px;
@@ -106,28 +106,28 @@ header #menu > ul > li.has-sub > a::after {
   -o-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
 }
-header #menu > ul > li.has-sub:hover > a::after {
+#cssmenu > ul > li.has-sub:hover > a::after {
   border-color: #009ae1;
 }
-header #menu ul ul {
+#cssmenu ul ul {
   position: absolute;
   left: -9999px;
 }
-header #menu li:hover > ul {
+#cssmenu li:hover > ul {
   left: auto;
 }
-header #menu.align-right li:hover > ul {
+#cssmenu.align-right li:hover > ul {
   right: 0;
 }
-header #menu ul ul ul {
+#cssmenu ul ul ul {
   margin-left: 100%;
   top: 0;
 }
-header #menu.align-right ul ul ul {
+#cssmenu.align-right ul ul ul {
   margin-left: 0;
   margin-right: 100%;
 }
-header #menu ul ul li {
+#cssmenu ul ul li {
   height: 0;
   -webkit-transition: height .2s ease;
   -moz-transition: height .2s ease;
@@ -135,27 +135,27 @@ header #menu ul ul li {
   -o-transition: height .2s ease;
   transition: height .2s ease;
 }
-header #menu ul li:hover > ul > li {
+#cssmenu ul li:hover > ul > li {
   height: 32px;
 }
-header #menu ul ul li a {
+#cssmenu ul ul li a {
   padding: 10px 20px;
   width: 160px;
   font-size: 12px;
-  background: #B98E57;
+  background: #333333;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #dddddd;
   -webkit-transition: color .2s ease;
   -moz-transition: color .2s ease;
   -ms-transition: color .2s ease;
   -o-transition: color .2s ease;
   transition: color .2s ease;
 }
-header #menu ul ul li:hover > a,
-header #menu ul ul li a:hover {
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {
   color: #ffffff;
 }
-header #menu ul ul li.has-sub > a::after {
+#cssmenu ul ul li.has-sub > a::after {
   position: absolute;
   top: 13px;
   right: 10px;
@@ -175,7 +175,7 @@ header #menu ul ul li.has-sub > a::after {
   -o-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
 }
-header #menu.align-right ul ul li.has-sub > a::after {
+#cssmenu.align-right ul ul li.has-sub > a::after {
   right: auto;
   left: 10px;
   border-bottom: 0;
@@ -183,77 +183,75 @@ header #menu.align-right ul ul li.has-sub > a::after {
   border-top: 1px solid #dddddd;
   border-left: 1px solid #dddddd;
 }
-header #menu ul ul li.has-sub:hover > a::after {
+#cssmenu ul ul li.has-sub:hover > a::after {
   border-color: #ffffff;
 }
 @media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
-  header #menu {
+  #cssmenu {
     width: 100%;
-	min-width:750px;
-	background-color:#630C0E;
   }
-  header #menu ul {
+  #cssmenu ul {
     width: 100%;
     display: none;
   }
-  header #menu.align-center > ul,
-  header #menu.align-right ul ul {
+  #cssmenu.align-center > ul,
+  #cssmenu.align-right ul ul {
     text-align: left;
   }
-  header #menu ul li,
-  header #menu ul ul li,
-  header #menu ul li:hover > ul > li {
+  #cssmenu ul li,
+  #cssmenu ul ul li,
+  #cssmenu ul li:hover > ul > li {
     width: 100%;
     height: auto;
     border-top: 1px solid rgba(120, 120, 120, 0.15);
   }
-  header #menu ul li a,
-  header #menu ul ul li a {
+  #cssmenu ul li a,
+  #cssmenu ul ul li a {
     width: 100%;
   }
-  header #menu > ul > li,
-  header #menu.align-center > ul > li,
-  header #menu.align-right > ul > li {
+  #cssmenu > ul > li,
+  #cssmenu.align-center > ul > li,
+  #cssmenu.align-right > ul > li {
     float: none;
     display: block;
   }
-  header #menu ul ul li a {
+  #cssmenu ul ul li a {
     padding: 20px 20px 20px 30px;
     font-size: 12px;
-    color: #FFF;
+    color: #000000;
     background: none;
   }
-  header #menu ul ul li:hover > a,
-  header #menu ul ul li a:hover {
-		color: #FFF;
+  #cssmenu ul ul li:hover > a,
+  #cssmenu ul ul li a:hover {
+    color: #000000;
   }
-  header #menu ul ul ul li a {
+  #cssmenu ul ul ul li a {
     padding-left: 40px;
   }
-  header #menu ul ul,
-  header #menu ul ul ul {
+  #cssmenu ul ul,
+  #cssmenu ul ul ul {
     position: relative;
     left: 0;
     right: auto;
     width: 100%;
     margin: 0;
   }
-  header #menu > ul > li.has-sub > a::after,
-  header #menu ul ul li.has-sub > a::after {
+  #cssmenu > ul > li.has-sub > a::after,
+  #cssmenu ul ul li.has-sub > a::after {
     display: none;
   }
-  header #menu-line {
+  #menu-line {
     display: none;
   }
-  header #menu header #menu-button {
+  #cssmenu #menu-button {
     display: block;
     padding: 20px;
-    color: #FFFFFF;
+    color: #000000;
     cursor: pointer;
     font-size: 12px;
     text-transform: uppercase;
   }
-  header #menu header #menu-button::after {
+  #cssmenu #menu-button::after {
     content: '';
     position: absolute;
     top: 20px;
@@ -261,9 +259,9 @@ header #menu ul ul li.has-sub:hover > a::after {
     display: block;
     width: 15px;
     height: 2px;
-    background: #FFFFFF;
+    background: #000000;
   }
-  header #menu header #menu-button::before {
+  #cssmenu #menu-button::before {
     content: '';
     position: absolute;
     top: 25px;
@@ -274,7 +272,7 @@ header #menu ul ul li.has-sub:hover > a::after {
     border-top: 2px solid #000000;
     border-bottom: 2px solid #000000;
   }
-  header #menu .submenu-button {
+  #cssmenu .submenu-button {
     position: absolute;
     z-index: 10;
     right: 0;
@@ -285,7 +283,7 @@ header #menu ul ul li.has-sub:hover > a::after {
     width: 52px;
     cursor: pointer;
   }
-  header #menu .submenu-button::after {
+  #cssmenu .submenu-button::after {
     content: '';
     position: absolute;
     top: 21px;
@@ -293,10 +291,10 @@ header #menu ul ul li.has-sub:hover > a::after {
     display: block;
     width: 1px;
     height: 11px;
-    background: #B98E57;
+    background: #000000;
     z-index: 99;
   }
-  header #menu .submenu-button::before {
+  #cssmenu .submenu-button::before {
     content: '';
     position: absolute;
     left: 21px;
@@ -304,11 +302,10 @@ header #menu ul ul li.has-sub:hover > a::after {
     display: block;
     width: 11px;
     height: 1px;
-    background: #B98E57;
+    background: #000000;
     z-index: 99;
   }
-  header #menu .submenu-button.submenu-opened:after {
+  #cssmenu .submenu-button.submenu-opened:after {
     display: none;
   }
- 
 }
