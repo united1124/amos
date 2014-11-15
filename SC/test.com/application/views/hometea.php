@@ -120,8 +120,6 @@ body{
 		margin-left:10%;
 		margin-right:10%;
 		min-width:1000px;
-		background-color:#FFF;
-		opacity:0.5;
 		border-radius:7px;
 	}
 	
@@ -152,6 +150,11 @@ body{
 		margin-top:15px;
 		margin-left:5px;
 	}
+#wlecome{
+		font-size:24px;
+		color:#F09;
+		padding:10px;
+	}
 </style>
 
 <body>
@@ -164,18 +167,22 @@ body{
         <img src="<?php echo base_url();?>img/ncuIcon2.png">
     <div id='cssmenu'>
 		<ul>
-			<li><a href='#'>ข้อมูลส่วนตัว</a></li>
-			<li><a href='#'>ข้อมูลนักศึกษา</a></li>
-			<li><a href='#'>เวลานัดหมาย</a></li>
-            <li><a href='#'>การนัดหมายของนักศึกษา</a></li>
-            <li><a href='#'>ใส่รายละเอียดข้อมูลการให้ปรึกษา</a></li>
-            <li><a href='#'>รายงาน</a></li>
+      		<li><a href='<?php echo base_url();?>index.php/teachers'>หน้าแรก</a></li>
+			<li><a href='<?php echo base_url();?>index.php/teachers/teainfo'>ข้อมูลส่วนตัว</a></li>
+			<li><a href='<?php echo base_url();?>index.php/teachers/teainfostu'>ข้อมูลนักศึกษา</a></li>
+			<li><a href='<?php echo base_url();?>index.php/teachers/teatime'>เวลานัดหมาย</a></li>
+            <li><a href='<?php echo base_url();?>index.php/teachers/teaevent'>การนัดหมายของนักศึกษา</a></li>
+            <li><a href='<?php echo base_url();?>index.php/teachers/teadetail'>ใส่รายละเอียดข้อมูลการให้ปรึกษา</a></li>
+            <li><a href='<?php echo base_url();?>index.php/teachers/teareport'>รายงาน</a></li>
 		</ul>
 	</div>	
     </div>
     
     <div id="bodyInfo">
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="wlecome">
+        	ยินดีต้อนรับอาจารย์ที่ปรึกษาเข้าสู่<br>ระบบอาจารย์ที่ปรึกษาออนไลน์<br><br>
+            <img src="<?php echo base_url();?>img/ncuview8.jpg">
+        </div>
     </div>
 </body>
 </html>

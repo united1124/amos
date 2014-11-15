@@ -124,8 +124,6 @@ body{
 		margin-left:10%;
 		margin-right:10%;
 		min-width:1000px;
-		background-color:#FFF;
-		opacity:0.5;
 		border-radius:7px;
 	}
 	
@@ -152,6 +150,11 @@ body{
 		margin-top:-70px;
 		margin-left:157px;
 	}
+#wlecome{
+		font-size:24px;
+		color:#F09;
+		padding:10px;
+	}
 </style>
 
 <body>
@@ -164,16 +167,20 @@ body{
         <img src="<?php echo base_url();?>img/ncuIcon2.png">
     <div id='cssmenu'>
 		<ul>
-			<li><a href='#'>ข้อมูลส่วนตัว</a></li>
-			<li><a href='#'>ข้อมูลอาจารย์ที่ปรึกษา</a></li>
-			<li><a href='#'>ทำรายการการนัดหมาย</a></li>
-            <li><a href='#'>ให้คะแนน</a></li>
+       		<li><a href='<?php echo base_url();?>index.php/students'>หน้าแรก</a></li>
+			<li><a href='<?php echo base_url();?>index.php/students/stuinfo'>ข้อมูลส่วนตัว</a></li>
+			<li><a href='<?php echo base_url();?>index.php/students/stuinfotea'>ข้อมูลอาจารย์ที่ปรึกษา</a></li>
+			<li><a href='<?php echo base_url();?>index.php/students/stuevent'>ทำรายการการนัดหมาย</a></li>
+            <li><a href='<?php echo base_url();?>index.php/students/stuscore'>ให้คะแนน</a></li>
 		</ul>
 	</div>	
     </div>
     
     <div id="bodyInfo">
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="wlecome">
+        	ยินดีต้อนรับนักศึกษาเข้าสู่<br>ระบบอาจารย์ที่ปรึกษาออนไลน์<br><br>
+            <img src="<?php echo base_url();?>img/ncuview10.jpg">
+        </div>
     </div>
 </body>
 </html>
